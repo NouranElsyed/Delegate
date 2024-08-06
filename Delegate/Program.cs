@@ -24,14 +24,14 @@
             //    Console.WriteLine(i);
 
 
-            string[] Names = { "Nouran", "Amr", "Hala", "Samar", "Mai", "Aliaa" };
-            Func<string, string, bool> NamesFunc = CompareFunctions.ArrageStringLengthAscending;
-            SortingAlgorithms<string>.BubbleSort(Names, NamesFunc);
-            foreach (string i in Names)
-                Console.WriteLine(i);
-            SortingAlgorithms<string>.BubbleSort(Names, CompareFunctions.ArrageStringLengthDescending);
-            foreach (string i in Names)
-                Console.WriteLine(i);
+            //string[] Names = { "Nouran", "Amr", "Hala", "Samar", "Mai", "Aliaa" };
+            //Func<string, string, bool> NamesFunc = CompareFunctions.ArrageStringLengthAscending;
+            //SortingAlgorithms<string>.BubbleSort(Names, NamesFunc);
+            //foreach (string i in Names)
+            //    Console.WriteLine(i);
+            //SortingAlgorithms<string>.BubbleSort(Names, CompareFunctions.ArrageStringLengthDescending);
+            //foreach (string i in Names)
+            //    Console.WriteLine(i);
 
 
             // List<int> Numbers = Enumerable.Range(1, 100).ToList(); 
@@ -85,6 +85,44 @@
             //foreach (string i in NamesLengthLessthan4)
             //    Console.Write($"{i} ");
 
+
+            //Predicate<int> predicate;
+            //predicate = TestingFunction.Test01;
+            //predicate.Invoke(10);      
+
+            //Func<int, string> func;
+            //func = TestingFunction.Test02;
+            //func.Invoke(5);
+
+            //Action<string> action;
+            //action = delegate (string str) { Console.WriteLine($"Helo {str}"); };
+            //action("Yomy");
+            //Action<int> action;
+
+
         }
+        
+    }
+    class TestingFunction
+
+    {
+
+
+        public static bool Test01(int X) 
+        {
+            return X > 0;
+        }
+
+
+        public static string Test02(int X)
+        {
+            return X.ToString();
+        }
+
+        //public static void Test03() 
+        //{
+        //    Console.WriteLine("Hello");
+        //}
+
     }
 }
