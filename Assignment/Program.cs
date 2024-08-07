@@ -1,4 +1,6 @@
-﻿namespace Assignment
+﻿using System.Collections.Generic;
+
+namespace Assignment
 {
     public delegate string bookFuncDelegate(Book B);
     internal class Program
@@ -18,22 +20,40 @@
             #endregion
             #region Part02
 
-            List<int> numbers = new List<int>() { 1,2,3,4};
-            numbers.Exists();
+            ImplementedList<int> numbers = new ImplementedList<int>();
+
+
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+
+            Console.WriteLine(numbers.Exist(x => x == 2));
+
+            Console.WriteLine(numbers.Find(x => x > 2));
+
+            List<int> all = new List<int>();
+            all = numbers.FindAll(x => x % 2 == 0);
+            Console.WriteLine(numbers.FindIndex(x => x == 3));
+            Console.WriteLine(numbers.FindLast(x => x < 4));
+            Console.WriteLine(numbers.FindLastIndex(x => x < 4));
+
+            numbers.Foreach(x => Console.Write($"{x} "));
+            Console.WriteLine();
+
+            Console.WriteLine(numbers.TrueForAll(x => x > 0));
+
             #endregion
-
-
-
-
-
-
-
-
 
 
         }
 
     }
+
+  
+
+
 
     public class Book
     {
